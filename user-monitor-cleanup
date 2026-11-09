@@ -1,0 +1,3 @@
+#!/bin/sh
+# /etc/cron.daily/user-monitor-cleanup - delete session files older than 365 days.
+find /var/log/user_sessions -type f -name '*.txt' -mtime +365 -delete

@@ -1,0 +1,4 @@
+## Record every program started inside a login session (auid is set at login;
+## 4294967295 means "not set", i.e. system services, which are ignored).
+-a always,exit -F arch=b64 -S execve -F auid!=4294967295 -k usercmd
+-a always,exit -F arch=b32 -S execve -F auid!=4294967295 -k usercmd
